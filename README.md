@@ -1,2 +1,2 @@
-# Dynamic Top Bar
-Gnome extension that makes the color of the Top Bar match the current desktop background.
+# Beep Timer
+Gnome extension that makes a sound play once every X seconds / runs a command.
