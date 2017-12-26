@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="BeepTimer">
+  <schema id="org.gnome.shell.extensions.beep-timer" path="/org/gnome/shell/extensions/beep-timer/">
+	<key type="b" name="enabled">
+	  <default>false</default>
+	  <summary>Timer enabled</summary>
+	  <description>Turns on the looping timer.</description>
+	</key>
+	<key type="b" name="eager">
+	  <default>true</default>
+	  <summary>Command executed asap</summary>
+	  <description>If true, the given command will be executed not only every time the timer laps, but also when the timer is first enabled.</description>
+	</key>
+	<key type="i" name="period">
+	  <default>60</default>
+	  <summary>Interval time (in seconds)</summary>
+	  <description>Sets the amount of time that must pass between each execution of the command.</description>
+	</key>
+	<key type="s" name="command">
+	  <default>"mplayer .beep.mp3"</default>
+	  <summary>Command that gets called</summary>
+	  <description>Command that gets called every time the timer laps.</description>
+	</key>
+	<key type="i" name="max-interval">
+      <default>180</default>
+      <summary>Maximum time (in minutes)</summary>
+      <description>Set maximum selectable time of the slider (in minutes). Use only values greater zero.</description>
+	</key>
+  </schema>
+</schemalist>
