@@ -115,12 +115,14 @@ function enable() {
 
 // Function is called when extension is disabled + screen is locked
 function disable() {
-	Main.panel.statusArea[MainPanelID].destroy();
 	timer.stop();
+	Main.panel.statusArea[MainPanelID].destroy();
 }
 
 /*
-function _openPrefs() {
-	Util.spawn(["gnome-shell-extension-prefs", Extension.uuid]);
-}
+  Left in case I decide to add a settings button to the panel menu in the future.
+
+  function _openPrefs() {
+      Util.spawn(["gnome-shell-extension-prefs", Extension.uuid]);
+  }
 */
