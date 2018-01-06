@@ -10,9 +10,9 @@ function getSettings(schema) {
 
 
     let schemaDir = extension.dir.get_child('schemas');
-    schemaSource = GioSSS.new_from_directory(schemaDir.get_path(),
-                                             GioSSS.get_default(),
-                                             false);
+    let schemaSource = GioSSS.new_from_directory(schemaDir.get_path(),
+												 GioSSS.get_default(),
+												 false);
 
     let schemaObj = schemaSource.lookup(schema, true);
     if (!schemaObj)

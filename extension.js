@@ -17,7 +17,7 @@ const MainPanelID = "beep-timer-button"
 
 // GLobal vairables
 let indicator_button, enabled_label, time_label, switcher, slider, settings;
-let period, max_interval, max_pow, icon;
+let period, max_interval, max_pow, icon, timer;
 
 // Function called when extension is enabled
 function init() {
