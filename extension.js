@@ -82,7 +82,7 @@ function enable() {
 	indicator_button = new PanelMenu.Button(null, MainPanelID);
 	// null is the menu – empty at first
 	icon = new St.Icon({
-        icon_name: "appointment-symbolic",
+        icon_name: "notification-symbolic",
         style_class: "system-status-icon"
     });
 	indicator_button.actor.add_actor(icon);
