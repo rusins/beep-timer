@@ -1,8 +1,9 @@
 {
-	"shell-version": ["3.26.2"],
+	"shell-version": ["40"],
 	"uuid": "beep-timer@rusins.github.com",
 	"name": "Beep Timer",
 	"description": "Makes a sound play once every X seconds.",
 	"settings-schema": "org.gnome.shell.extensions.beep-timer",
-	"url": "https://github.com/rusins/beep-timer"
+	"url": "https://github.com/rusins/beep-timer",
+	"version" : 2
 }

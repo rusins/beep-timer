@@ -25,6 +25,5 @@ function buildPrefsWidget() {
 	settings.bind("command", builder.get_object("field_command"), "text", Gio.SettingsBindFlags.DEFAULT);
 	settings.bind("eager", builder.get_object("field_eager"), "active", Gio.SettingsBindFlags.DEFAULT);
 
-	frame.show_all();
 	return frame;
 }
