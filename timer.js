@@ -49,6 +49,12 @@ const Timer = new Lang.Class({
 		
 		GLib.spawn_command_line_sync(this._command);
 		this._startTime += this._timerValue * 1000000;
+		if (this._startTime + this._timerValue * 1000000 < currentTime + 17 * 1000) {
+			// If the current time is already ahead of the next trigger time, then we assume that the command being run takes too long and we cannot
+			// execute it periodically with the set timer value. So instead we just guarantee a delay between runs with the current timer value.
+			// This should prevent the shell from freezing; kicks in if there is less than 17ms before next trigger.
+			this._startTime = currentTime;
+		}
 		return true; // we want the timer to loop forever
 	}
 
