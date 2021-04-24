@@ -88,17 +88,16 @@ function enable() {
 	indicator_button.actor.add_actor(icon);
 
 	// Switcher item
-	switcher = new PopupMenu.PopupSwitchMenuItem('');
+	switcher = new PopupMenu.PopupSwitchMenuItem("", settings.get_boolean("enabled"));
 	switcher.connect("toggled", _onToggle);
-	switcher.setToggleState(settings.get_boolean("enabled"));
 	_onToggle();
 	indicator_button.menu.addMenuItem(switcher);
 	
 	// Slider item
-	let sliderItem = new PopupMenu.PopupMenuItem('');
+	let sliderItem = new PopupMenu.PopupMenuItem("");
 	slider = new Slider.Slider(Math.log(period) / max_pow);
-	slider.connect("value-changed", _onSliderChanged);
-	sliderItem.actor.add(slider.actor, {expand: true});
+	slider.connect("notify::value", _onSliderChanged);
+    sliderItem.add_child(slider);
 	indicator_button.menu.addMenuItem(sliderItem);
 
 	// Finally
@@ -109,8 +108,6 @@ function enable() {
 	settings.connect('changed::period', _onSettingsChanged);
 	settings.connect('changed::max-interval', _onSettingsChanged);
 	settings.connect('changed::command', _onSettingsChanged);
-	
-	// TODO: remove
 }
 
 // Function is called when extension is disabled + screen is locked
@@ -123,6 +120,6 @@ function disable() {
   Left in case I decide to add a settings button to the panel menu in the future.
 
   function _openPrefs() {
-      Util.spawn(["gnome-shell-extension-prefs", Extension.uuid]);
+  Util.spawn(["gnome-shell-extension-prefs", Extension.uuid]);
   }
 */
