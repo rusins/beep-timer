@@ -48,7 +48,7 @@ const Timer = new Lang.Class({
 		}
 		
 		GLib.spawn_command_line_sync(this._command);
-		this._startTime = currentTime;
+		this._startTime += this._timerValue * 1000000;
 		return true; // we want the timer to loop forever
 	}
 
