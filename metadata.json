@@ -1,5 +1,5 @@
 {
-	"shell-version": ["3.26.2"],
+	"shell-version": ["42.2"],
 	"uuid": "beep-timer@rusins.github.com",
 	"name": "Beep Timer",
 	"description": "Makes a sound play once every X seconds.",
