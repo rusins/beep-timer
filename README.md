@@ -1,3 +1,6 @@
+# Discontinued!
+Does not work on latest versions of Gnome. Please use a pomodoro timer extension instead.
+
 # Beep Timer
 Gnome extension that makes a sound play once every X seconds / runs a command.
 Its main purpose is to combat procrastination by giving the user a sense of the passing of time, but because the command being run can be customized, it can be used for other purposes as well.
